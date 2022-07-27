@@ -1,17 +1,25 @@
 ﻿
-string[] OneArray = new string[6] { "morning", "fox", "life", "sea", "glory", "cool"}; 
-string[] TwoArray = new string[OneArray.Length]; 
+string[] OneArray = new string[6] { "morning", "fox", "life", "sea", "glory", "cool" };
+string[] TwoArray = new string[OneArray.Length];
 int n = 0;
-for(int i = 0; i < OneArray.Length;i++)
+for (int i = 0; i < OneArray.Length; i++)
 {
-    if(OneArray[i].Length <=3)
+    if (OneArray[i].Length <= 3)
     {
         TwoArray[n] = OneArray[i];
         n++;
     }
-     Console.Write($"{OneArray[i]} ");
+    Console.Write($"{OneArray[i]} ");
 
-        Console.Write(" ");
+    Console.Write(" ");
 }
 
-Console.Write("--> "); 
+Console.Write("--> ");
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+}
+PrintArray(TwoArray);
